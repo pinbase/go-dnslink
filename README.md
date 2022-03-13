@@ -27,18 +27,18 @@ Import the module as follows
 
 ```go
 import (
-	...
-	"github.com/pinbase/go-dnslink"
+  ...
+  "github.com/pinbase/go-dnslink"
 )
 ```
 
 ### Cloudflare
 
-The `"DOMAIN"` value should be the full domain you want to assign a DNSLink record to, e.g. "pinbase.io".
+The `"DOMAIN"` value should be the full domain you want to assign a DNSLink record to, e.g. `"pinbase.io"`.
 
 The `CID` value should be a CID from [go-cid](https://github.com/ipfs/go-cid).
 
-#### API token
+#### API Token
 
 ```go
 err := dnslink.Cloudflare("API_TOKEN", "", "DOMAIN", CID)
@@ -46,7 +46,7 @@ err := dnslink.Cloudflare("API_TOKEN", "", "DOMAIN", CID)
 
 You can generate an API token in the Cloudflare dashboard [https://dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens), using the `Edit zone DNS` template.
 
-#### API key and email
+#### API Key and Email
 
 ```go
 err := dnslink.Cloudflare("API_KEY", "EMAIL_ADDRESS", "DOMAIN", CID)
